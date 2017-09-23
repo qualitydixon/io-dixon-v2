@@ -1,0 +1,8 @@
+@import './theme';
+
+body {
+	height: 100%;
+	color: $fontColor;
+	background-color: $primary;
+	font-family: 'Merriweather Sans', sans-serif;
+}

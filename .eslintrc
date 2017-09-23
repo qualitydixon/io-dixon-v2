@@ -1,0 +1,125 @@
+{
+	"extends": [
+		"eslint-config-airbnb",
+		"plugin:flowtype/recommended",
+		"prettier",
+		"prettier/flowtype",
+		"prettier/react"
+	],
+	"parserOptions": {
+		"ecmaFeatures": {
+			"experimentalObjectRestSpread": true
+		}
+	},
+	"env": {
+		"browser": true,
+		"node": true
+	},
+	"rules": {
+		"react/prop-types": 0,
+		"react/sort-comp": [
+			1,
+			{
+				"order": [
+					"type-annotations",
+					"static-methods",
+					"lifecycle",
+					"everything-else",
+					"render"
+				],
+				"groups": {
+					"lifecycle": [
+						"displayName",
+						"propTypes",
+						"contextTypes",
+						"childContextTypes",
+						"mixins",
+						"statics",
+						"defaultProps",
+						"constructor",
+						"getDefaultProps",
+						"getInitialState",
+						"state",
+						"getChildContext",
+						"componentWillMount",
+						"componentDidMount",
+						"componentWillReceiveProps",
+						"shouldComponentUpdate",
+						"componentWillUpdate",
+						"componentDidUpdate",
+						"componentWillUnmount"
+					]
+				}
+			}
+		],
+		"react/jsx-space-before-closing": 0,
+		"react/prefer-stateless-function": 0,
+		"import/default": 0,
+		"import/no-amd": 0,
+		"import/no-mutable-exports": 0,
+		"import/no-named-as-default": 0,
+		"import/named": 0,
+		"import/namespace": 0,
+		"import/no-unresolved": 0,
+		"import/no-extraneous-dependencies": 0,
+		"import/extensions": 0,
+		"no-unused-vars": [
+			1,
+			{
+				"vars": "all",
+				"argsIgnorePattern":
+					"next|success|error|app|express|render|Router|Route|Link"
+			}
+		],
+		"comma-dangle": 0,
+		"react/jsx-no-bind": 0,
+		"react/jsx-first-prop-new-line": 0,
+		"react/jsx-filename-extension": 0,
+		"react/forbid-prop-types": 0,
+		"react/no-unused-prop-types": 1,
+		"no-console": 0,
+		"no-tabs": 0,
+		"max-len": [2, 2000, 4],
+		"id-length": [
+			2,
+			{
+				"min": 1,
+				"max": 50,
+				"properties": "never",
+				"exceptions": ["e"]
+			}
+		],
+		"arrow-body-style": 0,
+		"no-param-reassign": [
+			2,
+			{
+				"props": false
+			}
+		],
+		"prefer-template": 0,
+		"class-methods-use-this": 0,
+		"object-curly-spacing": 0,
+		"jsx-a11y/no-static-element-interactions": 0,
+		"curly": [2, "all"]
+	},
+	"plugins": ["react", "flowtype"],
+	"settings": {
+		"import/parser": "babel-eslint",
+		"import/resolver": {
+			"babel-module": {}
+		}
+	},
+	"globals": {
+		"React$Component": true,
+		"React$Element": true,
+		"__DEVELOPMENT__": true,
+		"__CLIENT__": true,
+		"__SERVER__": true,
+		"__DISABLE_SSR__": true,
+		"__DEVTOOLS__": true,
+		"__PERFTOOLS__": true,
+		"__LOG_LEVEL__": true,
+		"log": true,
+		"socket": true
+	}
+}
